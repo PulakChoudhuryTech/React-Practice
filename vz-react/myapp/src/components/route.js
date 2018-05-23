@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link, Redirect } from 'react-router-dom';
 import { Route1 } from './Route1';
-import { Route2 } from './Route2';
+import Route2 from './Route2';
 import { Route3 } from './Route3';
 import { Route4 } from './Route4';
 import NavLink from 'react-router-dom/NavLink';
 
 import '.././App.css';
+import { connect } from 'react-redux';
 
 export class RouteItems extends Component {
 

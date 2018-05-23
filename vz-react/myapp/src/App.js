@@ -57,6 +57,7 @@ export class App extends Component {
     this.setState({ colorList: colors });
   }
   render() {
+
     return (
       <div className="App">
         <External />
