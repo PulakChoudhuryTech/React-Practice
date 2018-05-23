@@ -8,6 +8,7 @@ import { ColorsList } from './components/colors';
 import { ColorsListWithKey } from './components/colorsListwithId';
 import { Form } from './components/form';
 import { RouteItems } from './components/route';
+import { AjaxComp } from './components/ajax-comp';
 
 export class App extends Component {
 
@@ -73,6 +74,8 @@ export class App extends Component {
         <Form />
         <br />
         <RouteItems />
+        <hr />
+        <AjaxComp />
       </div>
     );
   }

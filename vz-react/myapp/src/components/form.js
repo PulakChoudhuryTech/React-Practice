@@ -34,7 +34,7 @@ export class Form extends Component {
     render() {
         return (
             <form>
-                <input type="input" value={this.state.textVal} onChange={this.onChangeText} />
+                <input type="text" value={this.state.textVal} onChange={this.onChangeText} />
                 <input type="checkbox" checked={this.state.checkboxVal} onChange={this.onCheckChanged} />
                 <button type="submit" checked={this.onFormSubmit} onClick={this.onFormSubmit}>Submit</button>
             </form>
