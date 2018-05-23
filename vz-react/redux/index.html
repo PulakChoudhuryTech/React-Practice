@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.0/redux.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <button onclick="increment()">Increment</button>
+        <button onclick="decrement()">Decrement</button>
+        <br/>
+        <div id="display"></div>
+    </div>
+    <script>
+        function increment() {
+            appStore.dispatch({ type: "INCREMENT" })
+        }
+
+        function decrement() {
+            appStore.dispatch({ type: "DECREMENT" })
+        }
+
+        function counterReducer(prevState = { counter: 0 }, action) {
+            let newState;
+
+            switch (action.type) {
+                case "INCREMENT":
+                    newState = { ...prevState, counter: prevState.counter + 1 }
+                    break;
+                case "DECREMENT":
+                    newState = { ...prevState, counter: prevState.counter - 1 }
+                    break
+                default:
+                    newState = { ...prevState }
+                    break;
+            }
+            return newState
+        }
+        const appStore = Redux.createStore(counterReducer);
+        appStore.subscribe(() => {
+            console.log(appStore.getState());
+            document.getElementById('display').innerHTML = appStore.getState().counter;
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+bracket pair colorizer
+auto close tag
+auto rename tag
+path intellisense
+Reactjs code snippets
+vscolor picker
+vscode-icons
+
+
+/////////////////////////Setttings???????????????????????????
+"editor.formatOnSave": true
+
+
+
+npm i create-react-app -g
+create-react-app myapp
