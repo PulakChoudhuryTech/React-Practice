@@ -4,11 +4,13 @@ import './App.css';
 import { External } from './components/external';
 import { Internal } from './components/internal';
 import { Inline } from './components/inline';
+import { Todo } from './components/todo';
 import { ColorsList } from './components/colors';
 import { ColorsListWithKey } from './components/colorsListwithId';
 import { Form } from './components/form';
 import { RouteItems } from './components/route';
 import { AjaxComp } from './components/ajax-comp';
+import { TaskRoute } from './components/taskRoute';
 
 export class App extends Component {
 
@@ -61,6 +63,7 @@ export class App extends Component {
 
     return (
       <div className="App">
+        <TaskRoute></TaskRoute>
         <External />
         <Internal />
         <Inline />

@@ -8,6 +8,7 @@ import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
 import { counterReducer } from './reducers/counter-reducers';
 import FormContainer from './components/Route2';
+import TodoContainer from './components/todo';
 import { composeWithDevTools } from 'redux-devtools-extension';
 //middlewares
 import loggerMiddleware from './middlewares/loggerMiddleware';

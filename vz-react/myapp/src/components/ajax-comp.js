@@ -16,9 +16,6 @@ export class AjaxComp extends Component {
         this.setState({ url: ev.target.value })
     }
     onFormSubmit(ev) {
-        // const formVal = {
-        //     url: this.state.url,
-        // }
         axios.get(this.state.url).then((resp) => {
             console.log(resp.data);
         }).catch((err) => {

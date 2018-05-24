@@ -1,4 +1,4 @@
-export function counterReducer(prevState = { counter: 0 }, action) {
+export function counterReducer(prevState = { counter: 0, todoList: [], textVal: '' }, action) {
     let newState;
 
     switch (action.type) {
@@ -8,6 +8,11 @@ export function counterReducer(prevState = { counter: 0 }, action) {
         case "DECREMENT":
             newState = { ...prevState, counter: prevState.counter - 1 }
             break
+        case "ADD_TODO":
+            let todos = prevState.todoList;
+            todos.push(action.item);
+            newState = { todoList: todos, textVal: action.item }
+            break;
         default:
             newState = { ...prevState }
             break;
